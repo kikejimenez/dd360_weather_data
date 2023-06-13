@@ -21,7 +21,7 @@ def generate_summary_data(conn):
     return summary_data
 
 def generate_parquet_file():
-    conn = sqlite3.connect('weather_data.db')
+    conn = sqlite3.connect('/data/weather_data.db')
     summary_data = generate_summary_data(conn)
 
     # Convert last_update column to datetime type

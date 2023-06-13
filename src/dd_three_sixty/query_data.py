@@ -1,7 +1,7 @@
 import sqlite3
 
 # Connect to the SQLite database
-conn = sqlite3.connect('weather_data.db')
+conn = sqlite3.connect('/data/weather_data.db')
 cursor = conn.cursor()
 
 # Execute a SELECT query

@@ -38,7 +38,7 @@ def insert_weather_data(cursor, run_identifier, city_id, response_code_id, data)
                    (run_identifier, city_id, response_code_id, json.dumps(data)))
 
 def scrape_and_save_data():
-    conn = sqlite3.connect('weather_data.db')
+    conn = sqlite3.connect('/data/weather_data.db')
     cursor = conn.cursor()
 
     create_tables(cursor)
@@ -55,7 +55,8 @@ def scrape_and_save_data():
         if os.path.isdir(city_folder_path):
             # Iterate over the JSON files in the city folder
             for filename in os.listdir(city_folder_path):
-                if filename.endswith('_response.json'):
+                if filename.endswith('_response.json'): 
+                    print(f"Processing {filename} in {city_folder}...")
                     try:
                         with open(os.path.join(city_folder_path, filename)) as file:
                             json_data = json.load(file)
