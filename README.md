@@ -1,10 +1,13 @@
 ## Weather Data ETL Summary
 
 This summary provides an overview of the ETL (Extract, Transform, Load) steps involved in processing weather data using Airflow and Docker.
+![image](https://github.com/kikejimenez/dd360_weather_data/assets/13549270/97823875-c33f-4b62-b2e8-8e7a650d517d)
 
 ### Step 1: Scrape Weather Data
 
 The first step in the ETL process is to scrape weather data from a website. This is accomplished using the `extract/scrape_cities.py` script. The script makes an HTTP request to the weather website, retrieves the HTML content, and extracts the required data using regular expressions. The scraped data is then saved as JSON files, with one file per city and run.
+![image](https://github.com/kikejimenez/dd360_weather_data/assets/13549270/e3e0dfe6-f648-4475-a370-15b277bf2d60)
+![image](https://github.com/kikejimenez/dd360_weather_data/assets/13549270/d7093d41-6087-4ec0-ac9a-83096d37e0f9)
 
 ### Step 2: Load Data to SQL Database
 
