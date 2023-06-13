@@ -37,7 +37,7 @@ The ETL process incorporates the following technologies:
 The data flows through the ETL process as follows:
 
 1. The Scraper extracts weather data from a website using Python and Beautiful Soup.
-2. The SQL Script establishes a connection to the MySQL database and loads the extracted data using SQL statements.
+2. The SQL Script establishes a connection to the SQLite database and loads the extracted data using SQL statements.
 3. The Parquet Script reads the data from the SQL database, performs transformations using Python, and writes the transformed data into Parquet files.
 
-The sequential execution of these steps ensures a smooth flow of data from extraction to loading and transformation, leveraging the power of Python, SQL, MySQL, Parquet, Docker, Docker Compose, and Airflow.
+The sequential execution of these steps ensures a smooth flow of data from extraction to loading and transformation, leveraging the power of Python, SQL, SQLite3, Parquet, Docker, Docker Compose, and Airflow.
